@@ -115,7 +115,7 @@ svg#svg2 g#layer2 path:hover {
 .liste::before {
     content: 'Liste des soignants';
     display: block;
-    width: 50vh;
+    width: 50%;
     text-align: center;
     border-radius: 10px;
     font-size: 2rem;
