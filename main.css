@@ -1,0 +1,210 @@
+html, body {
+    border: 0;
+    text-align: center;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+    background-color: #fcfcfc;
+    align-items:center;
+}
+
+h1 {
+    margin-top: 1em;
+}
+
+header {
+    width: 50%;
+}
+
+header::after {
+    content: '';
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 2px;
+}
+
+div.map {
+    height: 72vh;
+    width: 50%;
+    min-width: 550px;
+}
+
+.main-frame {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 1em;
+    font-size: 20px;   
+    width: 90%;
+}
+
+.main-frame::after {
+    content: '';
+    display: block;
+    background-color: black;
+    width: 98vw;
+    height: 2px;
+    margin-top: 1em;
+}
+
+svg#svg2 {
+    fill: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+svg#svg2 g#layer2 path {
+    fill: none;
+    pointer-events: all;
+}
+
+svg#svg2 g#layer2 path:hover {
+    fill: #03a9f499;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    svg#svg2 {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+    div.map {
+        min-width: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.liste {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -1em;
+    width: 45%;
+}
+
+@media (max-width: 1200px) {
+    .main-frame {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .liste {
+        margin: 1%;
+        width: 100%;
+    }
+    .liste::before{
+        margin-top: 0em !important;
+        margin-bottom: 10px;
+    }
+    div.map {
+        width: 100%;
+    }
+    svg#svg2 {
+        border-radius: 0;
+    }
+}
+
+.liste::before {
+    content: 'Liste des soignants';
+    display: block;
+    width: 50vh;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 2rem;
+    margin-top: 2em;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    border: white solid;
+    margin: 1em;
+    border-radius: 1em;
+}
+
+ul li:nth-child(even) {
+    fill: #b14de1bd;
+}
+
+li::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+ul li svg {
+    display: block;
+    position: relative;
+    left: 61px;
+    top: 45px;
+}
+
+@media (max-width: 400px) {
+    ul li svg {
+        left: 69px;
+    }
+}
+
+li::after {
+    content: '';
+    display: block;
+    background-color: rgba(255, 255, 255, 0.185);
+    width: 100%;
+    height: 2px;
+    margin-top: 1em;
+    border-radius: 15px;
+}
+
+li:hover {
+    background: linear-gradient(-105deg, #ea77539c, #ee9f1e91, #f5ce0585, transparent 84%);
+    border-radius: 10px;
+}
+
+ul.soignant-liste {
+    margin-top: 1em;
+    padding: 1em;
+    width: 80%;
+    overflow-y: scroll;
+    max-height: 450px;
+}
+
+/* width */
+ul::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 9px;
+  }
+   
+  /* Handle */
+  ul::-webkit-scrollbar-thumb {
+    background: #d3ebfa; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ul::-webkit-scrollbar-thumb:hover {
+    background: #f4e2ba; 
+  }
+
+  li.box-soignant p span{
+    font-style: italic;
+    color: #686868;
+  }
+  
+  li.box-soignant p {font-family: auto;
+  }
