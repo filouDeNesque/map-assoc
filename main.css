@@ -7,9 +7,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    height: 98vh;
     background-color: #fcfcfc;
-    align-items:center;
+    align-items: center;
 }
 
 h1 {
@@ -40,7 +39,7 @@ div.map {
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 1em;
-    font-size: 20px;   
+    font-size: 20px;
     width: 90%;
 }
 
@@ -48,7 +47,7 @@ div.map {
     content: '';
     display: block;
     background-color: black;
-    width: 98vw;
+    width: 91%;
     height: 2px;
     margin-top: 1em;
 }
@@ -58,7 +57,6 @@ svg#svg2 {
     user-select: none;
     width: 100%;
     height: 100%;
-    border-radius: 100%;
 }
 
 svg#svg2 g#layer2 path {
@@ -102,7 +100,7 @@ svg#svg2 g#layer2 path:hover {
         margin: 1%;
         width: 100%;
     }
-    .liste::before{
+    .liste::before {
         margin-top: 0em !important;
         margin-bottom: 10px;
     }
@@ -180,31 +178,36 @@ ul.soignant-liste {
 }
 
 /* width */
+
 ul::-webkit-scrollbar {
     width: 9px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 9px;
-  }
-   
-  /* Handle */
-  ul::-webkit-scrollbar-thumb {
-    background: #d3ebfa; 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ul::-webkit-scrollbar-thumb:hover {
-    background: #f4e2ba; 
-  }
+}
 
-  li.box-soignant p span{
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 9px;
+}
+
+/* Handle */
+
+ul::-webkit-scrollbar-thumb {
+    background: #d3ebfa;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+
+ul::-webkit-scrollbar-thumb:hover {
+    background: #f4e2ba;
+}
+
+li.box-soignant p span {
     font-style: italic;
     color: #686868;
-  }
-  
-  li.box-soignant p {font-family: auto;
-  }
+}
+
+li.box-soignant p {
+    font-family: auto;
+}
