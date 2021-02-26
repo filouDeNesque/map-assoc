@@ -9,7 +9,7 @@ function display(elm) {
     var label = elm.getAttribute('label')
     console.log(label);
     chercheRegion(label)
-    document.querySelector('div.liste p').innerHTML = nmbsoignant + ' soignant en région ' + label
+    document.querySelector('.dentiste p').innerHTML = nmbsoignant + ' soignant en région ' + label
 }
 
 function chercheRegion(nomRegion) {
@@ -22,11 +22,9 @@ function chercheRegion(nomRegion) {
             console.log('present')
             addli(i)
             nmbsoignant++
-        }
-        else {
+        } else {
             console.log('pas present')
         }
-
     }
     console.log('nombre de soignant = ' + nmbsoignant)
 }
@@ -35,8 +33,7 @@ function chercheRegion(nomRegion) {
 var listsoigneurRegion = ['Midi-Pyrénées', 'Aquitaine', 'Languedoc-Roussillon', 'PACA', 'Rhône-Alpes', 'Poitou-Charentes', 'Limousin', 'Auvergne', 'Bretagne', 'Pays-de-la-Loire', 'Basse-Normandie', 'Centre', 'Bourgogne', 'Franche-Compté', 'Alsace', 'Lorraine', 'Champagne-Ardenne', 'Ile-de-France', 'Picardie', 'Haute-Normandie', 'Nord-Pas-de-Calais', 'Corse', 'Rhône-Alpes']
 
 //Liste des soignants
-soignant = [
-    {
+soignant = [{
         nom: 'Fiona Mos',
 
         region: ['PACA', 'Ile-de-France', 'Nord-Pas-de-Calais'],
@@ -57,40 +54,79 @@ soignant = [
     },
     {
         nom: 'Muriel Tudziarz',
-        region: ['Aquitaine'],
+        region: ['Aquitaine', 'Pays-de-la-Loire'],
         telephone: '0660606060',
         mail: 'fionamos2@gmail.com'
     },
     {
         nom: 'Annabelle Rouger',
-        region: ['Aquitaine', 'Ile-de-France'],
+        region: ['Aquitaine', 'Ile-de-France', 'Auvergne', 'Basse-Normandie'],
         telephone: '0660606060',
         mail: 'fionamos2@gmail.com'
     },
     {
         nom: 'Charlotte Augiat',
-        region: ['Ile-de-France'],
+        region: ['Ile-de-France', 'Auvergne', 'Pays-de-la-Loire'],
         telephone: '0660606060',
         mail: 'fionamos2@gmail.com'
     },
     {
-        nom: 'Fiona Mos',
-
-        region: ['PACA', 'Ile-de-France', 'Nord-Pas-de-Calais'],
+        nom: 'Colette Bler',
+        region: ['PACA', 'Poitou-Charentes', 'Nord-Pas-de-Calais', 'Bretagne'],
         telephone: '0660606060',
         mail: 'fionamos2@gmail.com'
     },
     {
-        nom: 'Fiona Mos',
-
-        region: ['PACA', 'Ile-de-France', 'Nord-Pas-de-Calais'],
+        nom: 'Agrican Deblois',
+        region: ['Poitou-Charentes', 'Ile-de-France', 'Nord-Pas-de-Calais'],
         telephone: '0660606060',
         mail: 'fionamos2@gmail.com'
     },
     {
-        nom: 'Fiona Mos',
-
-        region: ['PACA', 'Ile-de-France', 'Nord-Pas-de-Calais'],
+        nom: 'Prewitt St-Pierre',
+        region: ['PACA', 'Languedoc-Roussillon', 'Nord-Pas-de-Calais'],
+        telephone: '0660606060',
+        mail: 'fionamos2@gmail.com'
+    },
+    {
+        nom: 'Burnell Fluet',
+        region: ['Limousin', 'Basse-Normandie', 'Picardie', 'Haute-Normandie', 'Nord-Pas-de-Calais'],
+        telephone: '0660606060',
+        mail: 'fionamos2@gmail.com'
+    },
+    {
+        nom: 'Heloise Beaulac',
+        region: ['Rhône-Alpes', 'Limousin', 'Centre', 'Corse', 'Rhône-Alpes'],
+        telephone: '0660606060',
+        mail: 'fionamos2@gmail.com'
+    },
+    {
+        nom: 'Didier Arcouet',
+        region: ['PACA', 'Rhône-Alpes', 'Lorraine', 'Champagne-Ardenne'],
+        telephone: '0660606060',
+        mail: 'fionamos2@gmail.com'
+    },
+    {
+        nom: 'Dielle Michaud',
+        region: ['Auvergne', 'Bretagne', 'Centre', 'Picardie', 'Haute-Normandie', 'Nord-Pas-de-Calais'],
+        telephone: '0660606060',
+        mail: 'fionamos2@gmail.com'
+    },
+    {
+        nom: 'Alain Cantin',
+        region: ['Bourgogne', 'Franche-Compté', 'Alsace', 'Lorraine', 'Champagne-Ardenne'],
+        telephone: '0660606060',
+        mail: 'fionamos2@gmail.com'
+    },
+    {
+        nom: 'Georges Chalut',
+        region: ['Bourgogne', 'Franche-Compté', 'Alsace', 'Corse', 'Rhône-Alpes'],
+        telephone: '0660606060',
+        mail: 'fionamos2@gmail.com'
+    },
+    {
+        nom: 'Bernard Bonneville',
+        region: ['Auvergne', 'Bretagne', 'Centre', 'Lorraine', 'Champagne-Ardenne'],
         telephone: '0660606060',
         mail: 'fionamos2@gmail.com'
     },
@@ -98,7 +134,7 @@ soignant = [
 ]
 
 // trouver un soignant par region 
-var filtertest = soignant.filter(filter => filter.length = 2)   
+var filtertest = soignant.filter(filter => filter.length = 2)
 console.log('filtertest : ' + filtertest)
 var test = soignant.filter(filou => filou.region.alpha === 'PACA')
 
@@ -111,4 +147,3 @@ function addli(elm) {
 function cleanli() {
     document.querySelector('ul').innerHTML = ''
 }
-

@@ -9,13 +9,14 @@ font-family: 'Tienne', serif; */
     --color-bck-card: #EEF0FB;
     --color-primary: #B185A7;
     --color-text: #232C33;
-    --color-text2 : #B5B2C2;
-    --color-active : #0DAB76;
-    --color-wait : #F15946;
+    --color-text2: #B5B2C2;
+    --color-active: #0DAB76;
+    --color-wait: #F15946;
 }
 
 
-html, body {
+html,
+body {
     border: 0;
 }
 
@@ -32,17 +33,19 @@ h1 {
     margin-top: 1em;
 }
 
-h2{
+h2 {
     font-family: 'Frank Ruhl Libre', serif;
     font-size: 16px;
 }
 
-p, ul, li{
+p,
+ul,
+li {
     font-family: 'Tienne', serif;
     font-size: 13px;
 }
 
-.menu{
+.menu {
     width: 5%;
     height: inherit;
     color: var(--color-bck-card);
@@ -51,24 +54,31 @@ p, ul, li{
     flex-direction: column;
 }
 
-.menu i{
+.menu i {
     font-size: 26px;
     padding: 0.7em;
     text-align: center;
+    cursor: pointer;
 }
 
-.menu :nth-child(1){
-padding-top: 2em;
+.menu :nth-child(1) {
+    padding-top: 2em;
 }
 
-.main-body{
+.menu :nth-child(2) {
+    border-left: 2px solid white;
+    background: var(--color-bck-card);
+    background-color: var(--color-text2);
+}
+
+.main-body {
     display: flex;
     flex-direction: row;
     width: 95%;
     color: var(--color-text);
 }
 
-.liste-left{
+.liste-left {
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -76,25 +86,28 @@ padding-top: 2em;
     border-radius: 5px;
 }
 
-.list-head{
+.list-head {
     display: flex;
     align-items: center;
 }
 
-.icone{
-    margin-left:6em;
+.icone {
+    margin-left: 6em;
 }
-.icone :nth-child(2){
+
+.icone :nth-child(2) {
     padding-left: 10px;
 }
-.icone i{
+
+.icone i {
     cursor: pointer;
     color: var(--color-text2)
 }
 
-.map-section{
+.map-section {
     width: 75%;
     display: flex;
+    flex-direction: column;
     background: var(--color-bck-card);
     justify-content: center;
     margin: 2em 2em 2em 1em;
@@ -109,6 +122,7 @@ div.map {
     width: 50%;
     min-width: 550px;
     margin-top: 2em;
+    align-self: center;
 }
 
 
@@ -136,6 +150,7 @@ svg#svg2 g#layer2 path:hover {
         height: 100%;
         max-width: 100%;
     }
+
     div.map {
         min-width: 0;
         height: 100%;
@@ -157,13 +172,16 @@ svg#svg2 g#layer2 path:hover {
         margin: 1%;
         width: 100%;
     }
+
     .liste::before {
         margin-top: 0em !important;
         margin-bottom: 10px;
     }
+
     div.map {
         width: 100%;
     }
+
     svg#svg2 {
         border-radius: 0;
     }
@@ -173,7 +191,7 @@ li {
     list-style: none;
     cursor: pointer;
     background: var(--color-bck-card);
-    margin-bottom: 0.5em;
+    margin-bottom: 2em;
     border-radius: 5px;
     position: relative;
     box-shadow: 0 1px 1px rgb(0 0 0 / 25%), 0 5px 3px rgb(0 0 0 / 22%);
@@ -253,3 +271,48 @@ ul::-webkit-scrollbar-thumb:hover {
     background: #f4e2ba;
 }
 
+.head-card{
+    display: flex;
+    width: 100%;
+}
+
+.card{
+    width: 35%;
+    height: 200px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 25%), 0 5px 3px rgb(0 0 0 / 22%);
+    margin: 1em;
+    text-align: center;
+}
+
+.head-card :nth-child(2){
+    color: var(--color-bck-card);
+    background: var(--color-primary);
+    margin: 1em 0 1em 0;
+}
+
+.horaire p, .tarif p{
+    text-align: left;
+    margin-left: 50px !important;
+    letter-spacing: 2px;
+    margin-block: 4px !important;
+}
+
+.tarif p {
+    background: transparent !important;
+    color: var(--color-text) !important;
+    line-height: 3;
+}
+
+.horaire-color{
+    color: var(--color-text2);
+}
+
+.nmb-prat{
+    background: transparent !important;
+    color: var(--color-text) !important;
+    font-size: 11px;
+}
+
+.card h2{
+    margin-bottom: 8px;
+}
